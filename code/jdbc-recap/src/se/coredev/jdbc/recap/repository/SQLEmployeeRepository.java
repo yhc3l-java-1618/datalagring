@@ -40,7 +40,7 @@ public final class SQLEmployeeRepository implements EmployeeRepository {
 			ResultSet result = statement.executeQuery();
 			List<Employee> employees = new ArrayList<>();
 
-			if (result.next()) {
+			while (result.next()) {
 				employees.add(extractEmployee(result));
 			}
 
